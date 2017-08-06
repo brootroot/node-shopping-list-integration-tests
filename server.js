@@ -1,4 +1,3 @@
-
 const express = require('express');
 const morgan = require('morgan');
 
@@ -15,7 +14,6 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
-
 
 // when requests come into `/shopping-list` or
 // `/recipes`, we'll route them to the express
@@ -35,12 +33,14 @@ let server;
 function runServer() {
   const port = process.env.PORT || 8080;
   return new Promise((resolve, reject) => {
-    server = app.listen(port, () => {
-      console.log(`Your app is listening on port ${port}`);
-      resolve(server);
-    }).on('error', err => {
-      reject(err)
-    });
+    server = app
+      .listen(port, () => {
+        console.log(`Your app is listening on port ${port}`);
+        resolve(server);
+      })
+      .on('error', err => {
+        reject(err);
+      });
   });
 }
 
@@ -65,6 +65,6 @@ function closeServer() {
 // runs. but we also export the runServer command so other code (for instance, test code) can start the server as needed.
 if (require.main === module) {
   runServer().catch(err => console.error(err));
-};
+}
 
-module.exports = {app, runServer, closeServer};
+module.exports = { app, runServer, closeServer };
