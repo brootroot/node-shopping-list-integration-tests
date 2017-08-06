@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: HGzcdATvMdVRZNMIDxq66axPe03ijfQkj+t0jiSBQjzi48CbtFw2syyvus+HH9Neqecj7F940JLxFV9u6j21gsj5yep0oHmDczBYSVGdu/PjDx0V3B4jhzykfgFRJz0BVbAgfaQe2psqU1CHjVJuJMYq8U45yDRMMvrv8D0qOU6SBj48LwVmyB5AC/irdxBAU664nnNCmH9hqHxLWCifT3/HzYkRhSQiBrjdj+r2/Mj6xrHoTGMcNDAecvUVcnZh+FN05dZbkS0u66wBZ2hq34tw4H6dLNE09AsRF3bL3SjlRzkH5ciweDWrvrOYO0PuLH0zjjpl9L9Adt5MgWJXvkulrr5U5IxhvBjgLzCxaF5npqvwKtN5cC0oJTIvkw8NotjKI3nBAcGM3dvpugFtZRRTs2N3Zlgms8j9ITGU6WL8ZqOfUw+JDq/V5BjW0R+AjtIJias9IFzM6w2tHdv5WabGVad6t7ESc01UWdzBzAqjuA0iO0xmdcQYJIHJltXZvSwQ2eJdGXPHmbbCBMjqZ/BBe9uk5Q/00/onHKG0DW4DXBy1/gCtG/1gJTLQW80zb+FFxfDlxp/QFZioV1fyIXPUVQO1BrlbMrSSYloRMaYLVmbG77q+Qj38ePrw3VRCke0ozIVTpss881vgdFO+eeRljSnSQWTRIIMguKJxX5Q=
+  app: https://radiant-shore-68926.herokuapp.com/
+  on:
+    repo: brootroot/node-shopping-list-integration-tests
